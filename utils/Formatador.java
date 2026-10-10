@@ -15,7 +15,6 @@ public final class Formatador {
     }
 
     public static String moeda(double valor) {
-        // O Java separa "R$" do número com um espaço especial (U+00A0); trocamos por espaço comum.
         return NumberFormat.getCurrencyInstance(BRASIL).format(valor).replace('\u00A0', ' ');
     }
 
@@ -23,7 +22,6 @@ public final class Formatador {
         return DATA_BR.format(data);
     }
 
-    /** Lê "dd/MM/aaaa". Devolve null se o texto estiver vazio ou for inválido. */
     public static LocalDate lerData(String texto) {
         if (texto == null || texto.isBlank()) {
             return null;
