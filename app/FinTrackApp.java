@@ -1,8 +1,8 @@
-package br.com.capacita.fintrack.app;
+package app;
 
-import br.com.capacita.fintrack.controller.FinTracker;
-import br.com.capacita.fintrack.view.Alertas;
-import br.com.capacita.fintrack.view.Navegador;
+import controller.FinTracker;
+import view.Alertas;
+import view.Navegador;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
