@@ -1,8 +1,8 @@
-package br.com.capacita.fintrack.dao;
+package dao;
 
-import br.com.capacita.fintrack.exceptions.RepositorioException;
-import br.com.capacita.fintrack.model.Transacao;
-import br.com.capacita.fintrack.repository.Repositorio;
+import exceptions.RepositorioException;
+import model.Transacao;
+import repository.Repositorio;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -13,7 +13,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Isola toda a persistência (JDBC). Só usa PreparedStatement, então não há SQL Injection. */
 public class TransacaoDAO implements Repositorio<Transacao> {
 
     private static final String RECEITA = "RECEITA";
@@ -35,7 +34,6 @@ public class TransacaoDAO implements Repositorio<Transacao> {
             preencher(comando, transacao);
             comando.executeUpdate();
 
-            // Devolve o id gerado pelo banco para o objeto (necessário para editar/remover depois).
             try (ResultSet chaves = comando.getGeneratedKeys()) {
                 if (chaves.next()) {
                     transacao.setId(chaves.getInt(1));
