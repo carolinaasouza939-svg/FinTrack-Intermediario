@@ -1,9 +1,8 @@
-package br.com.capacita.fintrack.dao;
+package dao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/** Quem sabe abrir uma conexão. Nos testes, entra uma conexão com SQLite em memória. */
 @FunctionalInterface
 public interface FabricaConexao {
 
