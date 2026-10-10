@@ -1,10 +1,10 @@
-package br.com.capacita.fintrack.app;
+package app;
 
-import br.com.capacita.fintrack.controller.FinTracker;
-import br.com.capacita.fintrack.exceptions.EntradaInvalidaException;
-import br.com.capacita.fintrack.exceptions.RepositorioException;
-import br.com.capacita.fintrack.model.Transacao;
-import br.com.capacita.fintrack.utils.Formatador;
+import controller;
+import exceptions.EntradaInvalidaException;
+import exceptions.RepositorioException;
+import model.Transacao;
+import .utils.Formatador;
 
 import java.time.LocalDate;
 import java.util.List;
