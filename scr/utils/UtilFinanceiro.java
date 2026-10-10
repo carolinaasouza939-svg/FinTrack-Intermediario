@@ -1,6 +1,6 @@
-package br.com.capacita.fintrack.utils;
+package scr.utils;
 
-import br.com.capacita.fintrack.model.Transacao;
+import scr.model.Transacao;
 
 import java.util.List;
 
@@ -9,7 +9,6 @@ public final class UtilFinanceiro {
     private UtilFinanceiro() {
     }
 
-    /** ? extends Transacao: aceita List<Transacao> e também List<TransacaoMensal>. */
     public static double somar(List<? extends Transacao> transacoes) {
         double total = 0;
         for (Transacao transacao : transacoes) {
