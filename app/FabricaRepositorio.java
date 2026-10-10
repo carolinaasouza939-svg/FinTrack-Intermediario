@@ -1,11 +1,11 @@
-package br.com.capacita.fintrack.app;
+package app;
 
-import br.com.capacita.fintrack.dao.ConexaoPostgres;
-import br.com.capacita.fintrack.dao.TransacaoDAO;
-import br.com.capacita.fintrack.exceptions.RepositorioException;
-import br.com.capacita.fintrack.model.Transacao;
-import br.com.capacita.fintrack.repository.Repositorio;
-import br.com.capacita.fintrack.repository.RepositorioGenerico;
+import dao.ConexaoPostgres;
+import dao.TransacaoDAO;
+import exceptions.RepositorioException;
+import model.Transacao;
+import repository.Repositorio;
+import repository.RepositorioGenerico;
 
 import java.util.function.Consumer;
 
