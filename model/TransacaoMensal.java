@@ -1,10 +1,9 @@
-package br.com.capacita.fintrack.model;
+package model;
 
-import br.com.capacita.fintrack.exceptions.EntradaInvalidaException;
+import exceptions.EntradaInvalidaException;
 
 import java.time.LocalDate;
 
-/** Herança: uma transação que se repete todo mês (ex.: aluguel, internet, salário). */
 public class TransacaoMensal extends Transacao {
 
     private final int diaVencimento;
