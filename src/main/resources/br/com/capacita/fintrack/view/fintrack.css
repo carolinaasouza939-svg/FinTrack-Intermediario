@@ -5,7 +5,7 @@
       -fx-font-family: "Ubuntu", "Cantarell", "Noto Sans", "DejaVu Sans", "Segoe UI", sans-serif;
       -fx-font-size: 14px;
 
-      /* variáveis do JavaFX: com elas, calendário, alertas e listas já ficam escuros */
+      /* variáveis do JavaFX */
       -fx-base: #0f172a;
       -fx-background: #0f172a;
       -fx-control-inner-background: #0b1220;
@@ -232,7 +232,13 @@
   }
 
   /* ---------- barra de rolagem ---------- */
-  .scroll-bar {
+  .scroll-bar:vertical {
+      -fx-pref-width: 16px; /* Aumenta a largura da barra vertical */
+      -fx-background-color: transparent;
+  }
+
+  .scroll-bar:horizontal {
+      -fx-pref-height: 16px; /* Aumenta a altura da barra horizontal */
       -fx-background-color: transparent;
   }
 
@@ -243,7 +249,7 @@
 
   .scroll-bar .thumb {
       -fx-background-color: #1e293b;
-      -fx-background-radius: 6;
+      -fx-background-radius: 8; /* Aumentei ligeiramente o raio para acompanhar a largura */
   }
 
   .scroll-bar .thumb:hover {
