@@ -21,12 +21,19 @@ public final class Alertas {
         Alert alerta = new Alert(AlertType.CONFIRMATION, mensagem, ButtonType.YES, ButtonType.NO);
         alerta.setTitle("Confirmação");
         alerta.setHeaderText(null);
+        aplicarEstilo(alerta);
         return alerta.showAndWait().orElse(ButtonType.NO) == ButtonType.YES;
     }
 
     private static void exibir(AlertType tipo, String mensagem) {
         Alert alerta = new Alert(tipo, mensagem);
         alerta.setHeaderText(null);
+        aplicarEstilo(alerta);
         alerta.showAndWait();
+    }
+
+    private static void aplicarEstilo(Alert alerta) {
+        alerta.getDialogPane().getStylesheets().add(
+                Alertas.class.getResource("fintrack.css").toExternalForm());
     }
 }

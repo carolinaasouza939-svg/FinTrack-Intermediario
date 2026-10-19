@@ -1,83 +1,274 @@
-.root {
-    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    -fx-font-size: 14px;
-    -fx-background-color: #f4f6f8;
-}
+/* ===== FinTrack - tema escuro (Inspirado no design do Linux) =====
+   Paleta:  fundo #0f172a | barras #0b1220 | ciano #38bdf8 | verde #34d399 | rosa #fb7185 */
 
-.cabecalho {
-    -fx-background-color: #1f3a5f;
-}
+  .root, .dialog-pane {
+      -fx-font-family: "Ubuntu", "Cantarell", "Noto Sans", "DejaVu Sans", "Segoe UI", sans-serif;
+      -fx-font-size: 14px;
 
-.titulo {
-    -fx-font-size: 22px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #1f3a5f;
-}
+      /* variáveis do JavaFX: com elas, calendário, alertas e listas já ficam escuros */
+      -fx-base: #0f172a;
+      -fx-background: #0f172a;
+      -fx-control-inner-background: #0b1220;
+      -fx-accent: #38bdf8;
+      -fx-focus-color: #38bdf8;
+      -fx-faint-focus-color: transparent;
+      -fx-text-base-color: #f8fafc;
+      -fx-text-inner-color: #f8fafc;
+      -fx-prompt-text-fill: #64748b;
 
-.cabecalho .titulo {
-    -fx-text-fill: white;
-}
+      -fx-background-color: #0f172a;
+  }
 
-.saldo {
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-}
+  .label {
+      -fx-text-fill: #f8fafc;
+  }
 
-.cabecalho .saldo.positivo {
-    -fx-text-fill: #7be0a1;
-}
+  /* ---------- barra superior ---------- */
+  .cabecalho {
+      -fx-background-color: #0b1220;
+      -fx-border-color: #38bdf8;
+      -fx-border-width: 0 0 2 0;
+  }
 
-.cabecalho .saldo.negativo {
-    -fx-text-fill: #ff9b9b;
-}
+  .titulo {
+      -fx-font-size: 22px;
+      -fx-font-weight: bold;
+      -fx-text-fill: #f8fafc; /* Branco para destacar no fundo escuro, como na imagem */
+  }
 
-.valor-relatorio {
-    -fx-font-size: 20px;
-    -fx-font-weight: bold;
-}
+  .saldo {
+      -fx-font-size: 17px;
+      -fx-font-weight: bold;
+  }
 
-.valor-relatorio.positivo {
-    -fx-text-fill: #1e8e4e;
-}
+  .cabecalho .saldo.positivo {
+      -fx-text-fill: #34d399;
+  }
 
-.valor-relatorio.negativo {
-    -fx-text-fill: #c0392b;
-}
+  .cabecalho .saldo.negativo {
+      -fx-text-fill: #fb7185;
+  }
 
-.button {
-    -fx-background-radius: 6;
-    -fx-padding: 8 16 8 16;
-    -fx-cursor: hand;
-}
+  /* ---------- relatório ---------- */
+  .valor-relatorio {
+      -fx-font-size: 20px;
+      -fx-font-weight: bold;
+  }
 
-.botao-principal {
-    -fx-background-color: #1f3a5f;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-}
+  .valor-relatorio.positivo {
+      -fx-text-fill: #34d399;
+  }
 
-.botao-principal:hover {
-    -fx-background-color: #2c5282;
-}
+  .valor-relatorio.negativo {
+      -fx-text-fill: #fb7185;
+  }
 
-.botao-perigo {
-    -fx-text-fill: #c0392b;
-}
+  /* ---------- botões ---------- */
+  .button {
+      -fx-background-color: #1e293b;
+      -fx-text-fill: #f8fafc;
+      -fx-border-color: #334155;
+      -fx-border-radius: 16;
+      -fx-background-radius: 16;
+      -fx-padding: 8 20 8 20;
+      -fx-cursor: hand;
+  }
 
-.table-view .column-header-background {
-    -fx-background-color: #e2e8f0;
-}
+  .button:hover {
+      -fx-background-color: #334155;
+  }
 
-.table-view .coluna-numerica {
-    -fx-alignment: CENTER-RIGHT;
-}
+  .button:pressed {
+      -fx-background-color: #0f172a;
+  }
 
-.table-cell.receita {
-    -fx-text-fill: #1e8e4e;
-    -fx-font-weight: bold;
-}
+  .botao-principal {
+      -fx-background-color: #38bdf8;
+      -fx-border-color: #38bdf8;
+      -fx-text-fill: #0b1220; /* Texto escuro para dar contraste com o botão ciano */
+      -fx-font-weight: bold;
+  }
 
-.table-cell.despesa {
-    -fx-text-fill: #c0392b;
-    -fx-font-weight: bold;
-}
+  .botao-principal:hover {
+      -fx-background-color: #7dd3fc;
+  }
+
+  .botao-principal:pressed {
+      -fx-background-color: #0284c7;
+  }
+
+  .botao-perigo {
+      -fx-text-fill: #fb7185;
+  }
+
+  .botao-perigo:hover {
+      -fx-background-color: #e11d48;
+      -fx-border-color: #e11d48;
+      -fx-text-fill: white;
+  }
+
+  /* ---------- campos, data e botões de opção ---------- */
+  .text-field, .combo-box-base {
+      -fx-background-color: #0b1220;
+      -fx-text-fill: #f8fafc;
+      -fx-prompt-text-fill: #64748b;
+      -fx-border-color: #334155;
+      -fx-border-radius: 14;
+      -fx-background-radius: 14;
+      -fx-padding: 6 12 6 12;
+  }
+
+  .text-field:focused, .combo-box-base:focused {
+      -fx-border-color: #38bdf8;
+  }
+
+  /* o DatePicker já tem borda própria: o campo de dentro fica sem borda */
+  .date-picker .text-field {
+      -fx-background-color: transparent;
+      -fx-border-color: transparent;
+      -fx-prompt-text-fill: #64748b;
+  }
+
+  .date-picker .arrow-button {
+      -fx-background-color: transparent;
+  }
+
+  .date-picker .arrow-button .arrow {
+      -fx-background-color: #38bdf8;
+  }
+
+  .radio-button .radio {
+      -fx-background-color: #334155, #0b1220;
+      -fx-background-insets: 0, 1;
+  }
+
+  .radio-button:selected .radio {
+      -fx-background-color: #38bdf8, #0b1220;
+  }
+
+  .radio-button .dot {
+      -fx-background-color: transparent;
+  }
+
+  .radio-button:selected .dot {
+      -fx-background-color: #38bdf8;
+  }
+
+  /* ---------- tabela ---------- */
+  .table-view {
+      -fx-background-color: #0f172a;
+      -fx-border-color: #1e293b;
+      -fx-border-radius: 10;
+      -fx-background-radius: 10;
+      -fx-padding: 1;
+  }
+
+  .table-view .column-header-background {
+      -fx-background-color: #0b1220;
+      -fx-background-radius: 10 10 0 0;
+  }
+
+  .table-view .column-header, .table-view .filler {
+      -fx-background-color: #0b1220;
+      -fx-size: 38;
+      -fx-border-color: transparent transparent #38bdf8 transparent;
+  }
+
+  .table-view .column-header .label {
+      -fx-font-weight: bold;
+      -fx-text-fill: #38bdf8;
+  }
+
+  .table-view .placeholder .label {
+      -fx-text-fill: #64748b;
+  }
+
+  .table-row-cell {
+      -fx-background-color: #0f172a;
+      -fx-cell-size: 36;
+      -fx-border-color: transparent transparent #1e293b transparent;
+  }
+
+  .table-row-cell:odd {
+      -fx-background-color: #162032; /* Tom levemente mais claro para zebrar */
+  }
+
+  .table-row-cell:hover {
+      -fx-background-color: #1e293b;
+  }
+
+  .table-row-cell:selected {
+      -fx-background-color: #38bdf8;
+  }
+
+  .table-cell {
+      -fx-border-color: transparent #1e293b transparent transparent;
+      -fx-padding: 0 10 0 10;
+      -fx-alignment: CENTER-LEFT;
+      -fx-text-fill: #f8fafc;
+  }
+
+  .table-row-cell:selected .table-cell {
+      -fx-text-fill: #0b1220;
+  }
+
+  .table-view .coluna-numerica {
+      -fx-alignment: CENTER-RIGHT;
+  }
+
+  .table-cell.receita {
+      -fx-text-fill: #34d399;
+      -fx-font-weight: bold;
+  }
+
+  .table-cell.despesa {
+      -fx-text-fill: #fb7185;
+      -fx-font-weight: bold;
+  }
+
+  .table-row-cell:selected .table-cell.receita,
+  .table-row-cell:selected .table-cell.despesa {
+      -fx-text-fill: #0b1220;
+  }
+
+  /* ---------- barra de rolagem ---------- */
+  .scroll-bar {
+      -fx-background-color: transparent;
+  }
+
+  .scroll-bar .track {
+      -fx-background-color: transparent;
+      -fx-border-color: transparent;
+  }
+
+  .scroll-bar .thumb {
+      -fx-background-color: #1e293b;
+      -fx-background-radius: 6;
+  }
+
+  .scroll-bar .thumb:hover {
+      -fx-background-color: #334155;
+  }
+
+  .scroll-bar .increment-button, .scroll-bar .decrement-button {
+      -fx-background-color: transparent;
+      -fx-padding: 0;
+  }
+
+  .scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+      -fx-padding: 0;
+      -fx-shape: " ";
+  }
+
+  /* ---------- janelas de aviso / confirmação ---------- */
+  .dialog-pane {
+      -fx-background-color: #0f172a;
+  }
+
+  .dialog-pane > .button-bar > .container {
+      -fx-background-color: #0f172a;
+  }
+
+  .dialog-pane .label {
+      -fx-text-fill: #f8fafc;
+  }
