@@ -1,0 +1,83 @@
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f6f8;
+}
+
+.cabecalho {
+    -fx-background-color: #1f3a5f;
+}
+
+.titulo {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f3a5f;
+}
+
+.cabecalho .titulo {
+    -fx-text-fill: white;
+}
+
+.saldo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.cabecalho .saldo.positivo {
+    -fx-text-fill: #7be0a1;
+}
+
+.cabecalho .saldo.negativo {
+    -fx-text-fill: #ff9b9b;
+}
+
+.valor-relatorio {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.valor-relatorio.positivo {
+    -fx-text-fill: #1e8e4e;
+}
+
+.valor-relatorio.negativo {
+    -fx-text-fill: #c0392b;
+}
+
+.button {
+    -fx-background-radius: 6;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.botao-principal {
+    -fx-background-color: #1f3a5f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.botao-principal:hover {
+    -fx-background-color: #2c5282;
+}
+
+.botao-perigo {
+    -fx-text-fill: #c0392b;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e2e8f0;
+}
+
+.table-view .coluna-numerica {
+    -fx-alignment: CENTER-RIGHT;
+}
+
+.table-cell.receita {
+    -fx-text-fill: #1e8e4e;
+    -fx-font-weight: bold;
+}
+
+.table-cell.despesa {
+    -fx-text-fill: #c0392b;
+    -fx-font-weight: bold;
+}

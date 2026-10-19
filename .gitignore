@@ -1,0 +1,8 @@
+# IntelliJ / build
+.idea/
+*.iml
+out/
+target/
+
+# Configuração local do banco (contém a senha!)
+db.properties

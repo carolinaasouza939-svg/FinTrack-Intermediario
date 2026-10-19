@@ -1,0 +1,4 @@
+# Copie este arquivo para "db.properties" (na raiz do projeto) e preencha a sua senha.
+url=jdbc:postgresql://localhost:5432/fintrack_db
+usuario=postgres
+senha=sua-senha-aqui

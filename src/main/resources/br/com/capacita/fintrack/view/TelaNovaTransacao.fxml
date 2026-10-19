@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="520.0" prefWidth="760.0" spacing="20.0" stylesheets="@fintrack.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.capacita.fintrack.view.TelaNovaTransacaoController">
+   <padding>
+      <Insets bottom="24.0" left="40.0" right="40.0" top="24.0" />
+   </padding>
+   <children>
+      <Label fx:id="rotuloTitulo" styleClass="titulo" text="Nova transação" />
+      <GridPane hgap="14.0" vgap="16.0">
+         <columnConstraints>
+            <ColumnConstraints minWidth="110.0" />
+            <ColumnConstraints hgrow="ALWAYS" />
+         </columnConstraints>
+         <children>
+            <Label text="Descrição" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="campoDescricao" promptText="Ex.: Mercado" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Valor (R$)" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="campoValor" promptText="Ex.: 49,90" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Tipo" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <HBox spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <RadioButton fx:id="radioReceita" text="Receita">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="grupoTipo" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioDespesa" selected="true" text="Despesa" toggleGroup="$grupoTipo" />
+               </children>
+            </HBox>
+            <Label text="Data" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <DatePicker fx:id="seletorData" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER_RIGHT" spacing="12.0">
+         <children>
+            <Button onAction="#aoClicarCancelar" text="Cancelar" />
+            <Button onAction="#aoClicarSalvar" styleClass="botao-principal" text="Salvar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
