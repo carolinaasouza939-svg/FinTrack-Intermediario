@@ -111,7 +111,7 @@ public class Main {
         try {
             return Double.parseDouble(TECLADO.nextLine().trim().replace(',', '.'));
         } catch (NumberFormatException e) {
-            return 0; // 0 é recusado pela validação do Transacao
+            return 0; 
         }
     }
 }
