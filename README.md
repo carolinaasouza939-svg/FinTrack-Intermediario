@@ -31,11 +31,13 @@ Telas em `src/main/resources/.../view` (`.fxml` + `fintrack.css`).
 2. Copie `db.properties.example` para `db.properties` e coloque a sua senha
    (o arquivo está no `.gitignore`; a senha nunca vai para o GitHub).
    Alternativa: variáveis de ambiente `FINTRACK_DB_URL`, `FINTRACK_DB_USER`, `FINTRACK_DB_PASSWORD`.
-3. Interface: `mvn javafx:run` (ou rode a classe `Launcher` na IDE).
+3. Interface: rode a classe `Launcher` pela IDE ou, no terminal, `mvn javafx:run` (na pasta do `pom.xml`).
+   O `db.properties` deve ficar na raiz do projeto, ao lado do `pom.xml`.
+   Sem o PostgreSQL, o programa abre em memória.
    Console: classe `Main`.
 4. Testes: `mvn test`.
 
-Requisitos: JDK 21 e Maven (a IDE já traz). O JavaFX e os drivers vêm pelo `pom.xml`.
+Requisitos: JDK 21 ou mais novo. As IDEs (IntelliJ, Eclipse, NetBeans) já trazem o Maven. No terminal ou no VS Code é preciso instalar o Maven. O JavaFX e os drivers vêm pelo `pom.xml`.
 
 ## Testes
 
