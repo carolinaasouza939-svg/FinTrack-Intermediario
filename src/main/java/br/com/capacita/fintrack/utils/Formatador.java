@@ -15,7 +15,7 @@ public final class Formatador {
     }
 
     public static String moeda(double valor) {
-        // O Java separa "R$" do número com um espaço especial (U+00A0); trocamos por espaço comum.
+        // O Java separa "R$" do número com um espaço especial (U+00A0); 
         return NumberFormat.getCurrencyInstance(BRASIL).format(valor).replace('\u00A0', ' ');
     }
 
